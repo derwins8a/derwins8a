@@ -1,190 +1,274 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 760" version="1.1">
-  <title>Derwins Ochoa GitHub Profile</title>
-  <style>
-    :root {
-      --bg-color: #FFFFFF;
-      --bg-detail-color: rgba(0, 0, 0, 0.03);
-      --text-main-color: #0F172A;
-      --text-bold-color: #000000;
-      --accent-line: #8B5CF6;
-      --accent-glow: #6D28D9;
-      --box-border: #E2E8F0;
-      --box-bg: rgba(255, 255, 255, 0.5);
-      --name-transform: scale(1);
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg-color: #10172A;
-        --bg-detail-color: rgba(255, 255, 255, 0.04);
-        --text-main-color: #CBD5E1;
-        --text-bold-color: #F1F5F9;
-        --accent-line: #A78BFA;
-        --accent-glow: #7C3AED;
-        --box-border: #334155;
-        --box-bg: rgba(16, 23, 42, 0.6);
-        --name-transform: scale(1.02) skewX(-1deg);
-      }
-    }
-
-    /* Base styling for all elements */
-    * { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
-    text { fill: var(--text-main-color); }
-    .bold { fill: var(--text-bold-color); font-weight: 800; }
-    .accent { fill: var(--accent-line); }
-    .accent-stroke { stroke: var(--accent-line); }
-    .line { fill: none; stroke: var(--bg-detail-color); stroke-width: 0.5; }
-    .glow-line { fill: none; stroke: var(--accent-line); stroke-width: 1.5; filter: url(#glowFilter); }
-    .glow-soft { fill: var(--accent-glow); filter: url(#softGlowFilter); opacity: 0.2; }
-    .container { fill: var(--box-bg); stroke: var(--box-border); stroke-width: 1; rx: 16; ry: 16; }
-
-    /* Specific element styling */
-    .name {
-      font-size: 54px;
-      font-weight: 900;
-      fill: var(--text-bold-color);
-      letter-spacing: -2px;
-      text-transform: uppercase;
-      transform-origin: center top;
-      transition: transform 0.3s ease;
-      animation: nameGlow 2.5s infinite alternate;
-    }
-    .name:hover {
-      transform: var(--name-transform) scale(1.05);
-    }
-    @keyframes nameGlow {
-      from { filter: drop-shadow(0 0 5px rgba(124, 58, 237, 0.4)); }
-      to { filter: drop-shadow(0 0 15px rgba(124, 58, 237, 0.8)); }
-    }
-    .section-title { font-size: 22px; font-weight: 700; fill: var(--text-bold-color); }
-    .skill-category { font-size: 14px; font-weight: 600; fill: var(--accent-line); text-transform: uppercase; letter-spacing: 1px;}
-    .skill-item { font-size: 16px; }
-
-    /* RESPONSIVE LAYOUT ENGINE */
-    #about-section { transform: translate(40px, 180px); transition: transform 0.4s ease; }
-    #skills-section { transform: translate(420px, 180px); transition: transform 0.4s ease; }
-    #ack-section { transform: translate(40px, 360px); transition: transform 0.4s ease; }
-    
-    .half-card { width: 340px; transition: width 0.4s ease; }
-    .full-card { width: 720px; }
-
-    /* Triggers when the SVG is rendered at 768px wide or smaller */
-    @media (max-width: 768px) {
-      .half-card { width: 720px; }
-      #skills-section { transform: translate(40px, 360px); }
-      #ack-section { transform: translate(40px, 540px); }
-    }
-  </style>
-
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
   <defs>
-    <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#0066cc"/>
+      <stop offset="50%"  stop-color="#33ccff"/>
+      <stop offset="100%" stop-color="#99ff99"/>
+    </linearGradient>
+
+    <linearGradient id="window-glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="rgba(255,255,255,0.7)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.25)"/>
+    </linearGradient>
+
+    <linearGradient id="title-glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="rgba(255,255,255,0.9)"/>
+      <stop offset="49%"  stop-color="rgba(255,255,255,0.4)"/>
+      <stop offset="50%"  stop-color="rgba(200,230,255,0.2)"/>
+      <stop offset="100%" stop-color="rgba(150,200,255,0.5)"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="2" dy="8" stdDeviation="6" flood-opacity="0.25"/>
     </filter>
-    <filter id="softGlowFilter">
-      <feGaussianBlur stdDeviation="8"/>
+    <filter id="soft-blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12"/>
     </filter>
 
-    <g id="icon-about">
-      <circle cx="12" cy="12" r="10" stroke-width="2" class="accent-stroke" fill="none"/>
-      <path d="M12 7v6l3 3" stroke-width="2" class="accent-stroke" fill="none"/>
-      <path d="M7 12h.01M17 12h.01" stroke-width="3" class="accent-stroke" fill="none"/>
-    </g>
-    <g id="icon-skills">
-      <path d="M4 12v6a2 2 0 002 2h12a2 2 0 002-2v-6m-2-4a2 2 0 00-2-2h-3l-2-2-2 2h-3a2 2 0 00-2 2z" stroke-width="2" class="accent-stroke" fill="none"/>
-      <path d="M12 11V7m0 8v-4" stroke-width="2" class="accent-stroke" stroke-linecap="round"/>
-    </g>
-    <g id="icon-acknowledgements">
-      <path d="M12 4l2 4 4 1-3 3 1 4-4-2-4 2 1-4-3-3 4-1 2-4z" stroke-width="2" class="accent-stroke" fill="none"/>
-      <path d="M12 16V4m0 16l-3-3m6 0l-3 3" stroke-width="2" class="accent-stroke" stroke-linecap="round"/>
+    <linearGradient id="close-btn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#ff7b7b"/>
+      <stop offset="50%"  stop-color="#cc0000"/>
+      <stop offset="100%" stop-color="#660000"/>
+    </linearGradient>
+    <linearGradient id="close-btn-glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="rgba(255,255,255,0.8)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+
+    <linearGradient id="taskbar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="rgba(15,25,40,0.85)"/>
+      <stop offset="50%"  stop-color="rgba(5,10,20,0.95)"/>
+      <stop offset="100%" stop-color="rgba(0,0,5,1)"/>
+    </linearGradient>
+
+    <radialGradient id="start-orb" cx="30%" cy="30%" r="70%">
+      <stop offset="0%"   stop-color="#d4ffed"/>
+      <stop offset="30%"  stop-color="#33cc99"/>
+      <stop offset="80%"  stop-color="#006633"/>
+      <stop offset="100%" stop-color="#003311"/>
+    </radialGradient>
+
+    <style>
+      /* ---- Viewport Toggles ---- */
+      .desktop-view { display: block; }
+      .mobile-view { display: none; }
+
+      /* ---- Desktop layout (default — 2 columns) ---- */
+      #window-about    { transform: translate(50px,  50px);  }
+      #window-projects { transform: translate(520px, 50px);  }
+      #window-skills   { transform: translate(50px,  350px); }
+      #window-ack      { transform: translate(520px, 350px); }
+      #taskbar-group   { transform: translateY(650px);       }
+
+      /* Window geometry — desktop sizes */
+      .win-bg     { width: 430px; height: 270px; }
+      .win-border { width: 426px; height: 266px; }
+      .win-head   { width: 430px; }
+      .win-sep    { width: 430px; }
+
+      /* Close button — desktop */
+      .close-grp  { transform: translate(385px, 5px); }
+
+      /* ---- Mobile layout (≤768px — 1 column) ---- */
+      @media (max-width: 768px) {
+        /* Toggle nested wrappers */
+        .desktop-view { display: none; }
+        .mobile-view { display: block; }
+
+        #window-about    { transform: translate(50px, 30px);   }
+        #window-projects { transform: translate(50px, 320px);  }
+        #window-skills   { transform: translate(50px, 610px);  }
+        #window-ack      { transform: translate(50px, 900px);  }
+        #taskbar-group   { transform: translateY(1190px);      }
+
+        /* Expand windows to near-full width */
+        .win-bg     { width: 900px; }
+        .win-border { width: 896px; }
+        .win-head   { width: 900px; }
+        .win-sep    { width: 900px; }
+
+        /* Close button — mobile */
+        .close-grp  { transform: translate(855px, 5px); }
+      }
+    </style>
+
+    <g id="layout-content">
+      <rect width="1000" height="100%" fill="url(#bg)"/>
+
+      <path d="M -100 200 Q 400 0 1100 300 L 1100 1300 L -100 1300 Z"  fill="rgba(255,255,255,0.1)"/>
+      <path d="M 0 400 Q 500 200 1000 500 L 1000 1300 L 0 1300 Z"       fill="rgba(255,255,255,0.15)"/>
+
+      <circle cx="850" cy="150" r="120" fill="url(#window-glass)" opacity="0.4" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+      <circle cx="820" cy="120" r="40"  fill="rgba(255,255,255,0.5)" filter="url(#soft-blur)"/>
+      <circle cx="150" cy="550" r="180" fill="url(#window-glass)" opacity="0.3" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+
+      <circle cx="900" cy="920" r="160" fill="url(#window-glass)" opacity="0.2" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+      <circle cx="100" cy="1080" r="110" fill="rgba(255,255,255,0.08)" filter="url(#soft-blur)"/>
+      <circle cx="500" cy="800"  r="80"  fill="rgba(255,255,255,0.12)" filter="url(#soft-blur)"/>
+      <path d="M 0 750 Q 300 680 700 800 Q 900 860 1100 780 L 1100 1300 L 0 1300 Z" fill="rgba(255,255,255,0.06)"/>
+
+      <g id="window-about" filter="url(#shadow)">
+        <rect class="win-bg"     x="0" y="0" width="430" height="270" rx="12"
+              fill="url(#window-glass)" stroke="rgba(255,255,255,0.7)" stroke-width="2"/>
+        <rect class="win-border" x="2" y="2" width="426" height="266" rx="10"
+              fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+
+        <rect class="win-head" x="0" y="0"  width="430" rx="12" height="35" fill="url(#title-glass)"/>
+        <rect class="win-head" x="0" y="23" width="430" height="12"         fill="url(#title-glass)"/>
+        <rect class="win-sep"  x="0" y="35" width="430" height="1"          fill="rgba(255,255,255,0.5)"/>
+
+        <text x="15" y="23" font-family="'Segoe UI', Helvetica, sans-serif" font-size="15" font-weight="600" fill="white">About me</text>
+        <text x="15" y="22" font-family="'Segoe UI', Helvetica, sans-serif" font-size="15" font-weight="600" fill="#002244">About me</text>
+
+        <g class="close-grp">
+          <rect width="35" height="20" rx="4" fill="url(#close-btn)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+          <path d="M 2 2 Q 17.5 12 33 2" fill="url(#close-btn-glow)"/>
+          <text x="17.5" y="14" font-family="sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">X</text>
+        </g>
+
+        <circle cx="70" cy="120" r="45" fill="rgba(255,255,255,0.5)" stroke="white" stroke-width="3"/>
+        <path d="M70 100 a 15 15 0 1 0 0 -30 a 15 15 0 1 0 0 30 z M45 140 c 0 -20 15 -30 25 -30 h 0 c 10 0 25 10 25 30" fill="#0066cc" opacity="0.8"/>
+
+        <text x="135" y="80" font-family="'Segoe UI', Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#003366">Hello, World! 🌍</text>
+        <text x="135" y="110" font-family="'Segoe UI', Helvetica, sans-serif" font-size="14" fill="#222">
+          <tspan x="135" dy="0">I'm a passionate developer building</tspan>
+          <tspan x="135" dy="22">scalable tools and exploring vintage</tspan>
+          <tspan x="135" dy="22">aesthetics like Frutiger Aero.</tspan>
+          <tspan x="135" dy="28" font-weight="bold" fill="#0055aa">📫 Let's connect!</tspan>
+        </text>
+      </g>
+
+      <g id="window-projects" filter="url(#shadow)">
+        <rect class="win-bg"     x="0" y="0" width="430" height="270" rx="12" fill="url(#window-glass)" stroke="rgba(255,255,255,0.7)" stroke-width="2"/>
+        <rect class="win-border" x="2" y="2" width="426" height="266" rx="10" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+        <rect class="win-head" x="0" y="0"  width="430" rx="12" height="35" fill="url(#title-glass)"/>
+        <rect class="win-head" x="0" y="23" width="430" height="12" fill="url(#title-glass)"/>
+        <rect class="win-sep"  x="0" y="35" width="430" height="1" fill="rgba(255,255,255,0.5)"/>
+
+        <text x="15" y="23" font-family="'Segoe UI', Helvetica, sans-serif" font-size="15" font-weight="600" fill="white">Projects</text>
+        <text x="15" y="22" font-family="'Segoe UI', Helvetica, sans-serif" font-size="15" font-weight="600" fill="#002244">Projects</text>
+
+        <g class="close-grp">
+          <rect width="35" height="20" rx="4" fill="url(#close-btn)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+          <path d="M 2 2 Q 17.5 12 33 2" fill="url(#close-btn-glow)"/>
+          <text x="17.5" y="14" font-family="sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">X</text>
+        </g>
+
+        <rect x="20" y="55" width="390" height="50" rx="6" fill="rgba(255,255,255,0.4)" stroke="rgba(255,255,255,0.7)"/>
+        <text x="35" y="75" font-family="'Segoe UI', Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#004488">✨ Route Master</text>
+        <text x="35" y="92" font-family="'Segoe UI', Helvetica, sans-serif" font-size="12" fill="#333">Pseudo bus-sim focused on creating routes and growing your transportation company!</text>
+
+        <rect x="20" y="115" width="390" height="50" rx="6" fill="rgba(255,255,255,0.4)" stroke="rgba(255,255,255,0.7)"/>
+        <text x="35" y="135" font-family="'Segoe UI', Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#004488">🌐 Tolling SYstem Backend</text>
+        <text x="35" y="152" font-family="'Segoe UI', Helvetica, sans-serif" font-size="12" fill="#333">High performance REST APIs written in FastAPI for managing toll payments across different payment methods.</text>
+
+        <rect x="20" y="175" width="390" height="50" rx="6" fill="rgba(255,255,255,0.4)" stroke="rgba(255,255,255,0.7)"/>
+        <text x="35" y="195" font-family="'Segoe UI', Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#004488">📱 Banco Responsable</text>
+        <text x="35" y="212" font-family="'Segoe UI', Helvetica, sans-serif" font-size="12" fill="#333">"PayPal-like" bank for learning OOP principles and showcasing custom modern-looking WinForms components.</text>
+      </g>
+
+      <g id="window-skills" filter="url(#shadow)">
+        <rect class="win-bg" x="0" y="0" width="430" height="270" rx="12" fill="url(#window-glass)" stroke="rgba(255,255,255,0.7)" stroke-width="2"/>
+        <rect class="win-border" x="2" y="2" width="426" height="266" rx="10" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+        <rect class="win-head" x="0" y="0"  width="430" rx="12" height="35" fill="url(#title-glass)"/>
+        <rect class="win-head" x="0" y="23" width="430" height="12" fill="url(#title-glass)"/>
+        <rect class="win-sep"  x="0" y="35" width="430" height="1" fill="rgba(255,255,255,0.5)"/>
+
+        <text x="15" y="23" font-family="'Segoe UI', Helvetica, sans-serif" font-size="15" font-weight="600" fill="white">Core Skills</text>
+        <text x="15" y="22" font-family="'Segoe UI', Helvetica, sans-serif" font-size="15" font-weight="600" fill="#002244">Core Skills</text>
+
+        <g class="close-grp">
+          <rect width="35" height="20" rx="4" fill="url(#close-btn)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+          <path d="M 2 2 Q 17.5 12 33 2" fill="url(#close-btn-glow)"/>
+          <text x="17.5" y="14" font-family="sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">X</text>
+        </g>
+
+        <text x="20" y="70" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" fill="#333">TypeScript &amp; JavaScript</text>
+        <rect x="20" y="80" width="390" height="16" rx="8" fill="rgba(255,255,255,0.5)" stroke="rgba(0,0,0,0.1)"/>
+        <rect x="20" y="80" width="350" height="16" rx="8" fill="url(#bg)"/>
+        <path d="M 20 88 L 370 88 A 8 8 0 0 0 370 80 L 20 80 A 8 8 0 0 0 20 88 Z" fill="rgba(255,255,255,0.4)"/>
+
+        <text x="20" y="125" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" fill="#333">React, Next.js &amp; Frontend Architecture, C#</text>
+        <rect x="20" y="135" width="390" height="16" rx="8" fill="rgba(255,255,255,0.5)" stroke="rgba(0,0,0,0.1)"/>
+        <rect x="20" y="135" width="370" height="16" rx="8" fill="url(#bg)"/>
+        <path d="M 20 143 L 390 143 A 8 8 0 0 0 390 135 L 20 135 A 8 8 0 0 0 20 143 Z" fill="rgba(255,255,255,0.4)"/>
+
+        <text x="20" y="180" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" fill="#333">C, C++</text>
+        <rect x="20" y="190" width="390" height="16" rx="8" fill="rgba(255,255,255,0.5)" stroke="rgba(0,0,0,0.1)"/>
+        <rect x="20" y="190" width="280" height="16" rx="8" fill="url(#bg)"/>
+        <path d="M 20 198 L 300 198 A 8 8 0 0 0 300 190 L 20 190 A 8 8 0 0 0 20 198 Z" fill="rgba(255,255,255,0.4)"/>
+
+        <text x="20" y="235" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" fill="#333">UI/UX Design, Figma</text>
+        <rect x="20" y="245" width="390" height="16" rx="8" fill="rgba(255,255,255,0.5)" stroke="rgba(0,0,0,0.1)"/>
+        <rect x="20" y="245" width="310" height="16" rx="8" fill="url(#bg)"/>
+        <path d="M 20 253 L 330 253 A 8 8 0 0 0 330 245 L 20 245 A 8 8 0 0 0 20 253 Z" fill="rgba(255,255,255,0.4)"/>
+      </g>
+
+      <g id="window-ack" filter="url(#shadow)">
+        <rect class="win-bg" x="0" y="0" width="430" height="270" rx="12" fill="url(#window-glass)" stroke="rgba(255,255,255,0.7)" stroke-width="2"/>
+        <rect class="win-border" x="2" y="2" width="426" height="266" rx="10" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+        <rect class="win-head" x="0" y="0"  width="430" rx="12" height="35" fill="url(#title-glass)"/>
+        <rect class="win-head" x="0" y="23" width="430" height="12" fill="url(#title-glass)"/>
+        <rect class="win-sep"  x="0" y="35" width="430" height="1" fill="rgba(255,255,255,0.5)"/>
+
+        <text x="15" y="23" font-family="'Segoe UI', Helvetica, sans-serif" font-size="15" font-weight="600" fill="white">Acknowledgements</text>
+        <text x="15" y="22" font-family="'Segoe UI', Helvetica, sans-serif" font-size="15" font-weight="600" fill="#002244">Acknowledgements</text>
+
+        <g class="close-grp">
+          <rect width="35" height="20" rx="4" fill="url(#close-btn)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+          <path d="M 2 2 Q 17.5 12 33 2" fill="url(#close-btn-glow)"/>
+          <text x="17.5" y="14" font-family="sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">X</text>
+        </g>
+
+        <circle cx="215" cy="110" r="45" fill="rgba(255,255,255,0.6)" filter="url(#soft-blur)"/>
+        <text x="215" y="100" font-family="'Segoe UI', sans-serif" font-size="45" text-anchor="middle">🏆</text>
+        <text x="215" y="145" font-family="'Segoe UI', sans-serif" font-size="18" font-weight="bold" fill="#003366" text-anchor="middle">Special Thanks to:</text>
+        <text x="215" y="180" font-family="'Segoe UI', sans-serif" font-size="15" fill="#222" text-anchor="middle">
+          <tspan x="215" dy="0">The incredible open-source community</tspan>
+          <tspan x="215" dy="25">Coffee</tspan>
+          <tspan x="215" dy="25">And the people that have supported me. You know who you are!</tspan>
+        </text>
+      </g>
+
+      <g id="taskbar-group">
+        <rect x="0" y="0"  width="1000" height="50" fill="url(#taskbar)"/>
+        <rect x="0" y="0"  width="1000" height="1"  fill="rgba(255,255,255,0.3)"/>
+        <rect x="0" y="1"  width="1000" height="15" fill="rgba(255,255,255,0.08)"/>
+
+        <g transform="translate(15, -15)" filter="url(#shadow)">
+          <circle cx="35" cy="35" r="28" fill="url(#start-orb)" stroke="rgba(255,255,255,0.8)" stroke-width="2"/>
+          <path d="M 15 25 Q 35 10 55 25 A 20 20 0 0 0 15 25 Z" fill="rgba(255,255,255,0.6)"/>
+          <g transform="translate(25, 25)">
+            <path d="M 0 0 L 9 1 L 9 9 L 0 9 Z"   fill="#ff6b6b"/>
+            <path d="M 11 1 L 20 0 L 20 9 L 11 9 Z" fill="#4dabf7"/>
+            <path d="M 0 11 L 9 11 L 9 20 L 0 19 Z" fill="#51cf66"/>
+            <path d="M 11 11 L 20 11 L 20 19 L 11 20 Z" fill="#fcc419"/>
+          </g>
+        </g>
+
+        <rect x="100" y="8" width="140" height="34" rx="4" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+        <text x="115" y="30" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="500" fill="white">👤 About me</text>
+
+        <rect x="250" y="8" width="140" height="34" rx="4" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+        <text x="265" y="30" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="500" fill="white">📂 Projects</text>
+
+        <rect x="400" y="8" width="140" height="34" rx="4" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+        <text x="415" y="30" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="500" fill="white">⚙️ Core Skills</text>
+
+        <rect x="550" y="8" width="160" height="34" rx="4" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+        <text x="565" y="30" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="500" fill="white">🏆 Acknowledgements</text>
+
+        <text x="910" y="30" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="500" fill="white">10:42 AM</text>
+      </g>
     </g>
   </defs>
 
-  <rect width="100%" height="100%" fill="var(--bg-color)"/>
-  <rect x="20" y="20" width="760" height="720" rx="16" ry="16" class="container"/>
+  <svg class="desktop-view" viewBox="0 0 1000 700" width="100%" height="100%">
+    <use href="#layout-content" />
+  </svg>
 
-  <g class="line">
-    <path d="M100 0v760M200 0v760M300 0v760M400 0v760M500 0v760M600 0v760M700 0v760" opacity="0.1"/>
-    <path d="M0 100h800M0 200h800M0 300h800M0 400h800M0 500h800M0 600h800M0 700h800" opacity="0.1"/>
-    <path d="M0 0l800 760M800 0l-800 760" opacity="0.05" stroke-width="1.5"/>
-    <path d="M 20 740 L 70 690 L 150 690 L 180 720 L 780 720 L 780 20" opacity="0.3" class="accent-stroke" stroke-width="1.5" stroke-dasharray="10 2"/>
-    <path d="M 20 20 L 780 20 L 780 740 L 20 740 Z" opacity="0.15" class="accent-stroke" stroke-width="1" stroke-dasharray="5 5"/>
-  </g>
+  <svg class="mobile-view" viewBox="0 0 1000 1240" width="100%" height="100%">
+    <use href="#layout-content" />
+  </svg>
 
-  <rect x="20" y="20" width="760" height="15" rx="8" ry="8" class="glow-soft"/>
-  <line x1="20" y1="20" x2="780" y2="20" class="glow-line" opacity="0.8"/>
-  <circle cx="20" cy="20" r="5" class="accent"/>
-  <circle cx="780" cy="20" r="5" class="accent"/>
-
-  <g transform="translate(400, 100)" text-anchor="middle">
-    <text y="0" class="name">Derwins Ochoa</text>
-    <text y="35" x="-150" class="skill-category accent" font-size="16">🚀 CREATIVE DEVELOPER</text>
-    <text y="35" x="150" class="skill-category accent" font-size="16">⚡ PROBLEM SOLVER</text>
-    <line x1="-300" y1="35" x2="-220" y2="35" class="accent-stroke" stroke-width="2"/>
-    <line x1="220" y1="35" x2="300" y2="35" class="accent-stroke" stroke-width="2"/>
-  </g>
-
-  <g id="about-section">
-    <use href="#icon-about" x="0" y="0" width="24" height="24"/>
-    <text x="35" y="19" class="section-title">About Me</text>
-    <rect x="0" y="35" height="130" class="container half-card"/>
-    <text x="15" y="65" font-size="17" class="accent" font-weight="700">🚀 PASSIONATE CREATOR</text>
-    <text x="15" y="90" font-size="15">Building clean, impactful, and futuristic solutions.</text>
-    <text x="15" y="110" font-size="15">Focused on crafting user-driven digital experiences.</text>
-    <text x="15" y="130" font-size="15">Open for challenging collaborations.</text>
-    <text x="15" y="150" font-size="14" class="accent" font-style="italic">Always learning, always building. ✨</text>
-  </g>
-
-  <g id="skills-section">
-    <use href="#icon-skills" x="0" y="0" width="24" height="24"/>
-    <text x="35" y="19" class="section-title">Core Skills</text>
-    <rect x="0" y="35" height="130" class="container half-card"/>
-
-    <g transform="translate(15, 60)">
-      <text class="skill-category">Frontend</text>
-      <g transform="translate(0, 20)">
-        <text class="skill-item">React</text>
-        <text class="skill-item" x="70">TypeScript</text>
-        <text class="skill-item" x="150">Vue</text>
-        <text class="skill-item" x="210">Tailwind</text>
-        <path d="M0 5 L0 30 M70 5 L70 30 M150 5 L150 30 M210 5 L210 30" class="accent-stroke" opacity="0.2"/>
-      </g>
-    </g>
-    <g transform="translate(15, 120)">
-      <text class="skill-category">Backend</text>
-      <g transform="translate(0, 20)">
-        <text class="skill-item">Node.js</text>
-        <text class="skill-item" x="85">Python</text>
-        <text class="skill-item" x="160">Go</text>
-        <text class="skill-item" x="210">APIs</text>
-        <path d="M0 5 L0 30 M85 5 L85 30 M160 5 L160 30 M210 5 L210 30" class="accent-stroke" opacity="0.2"/>
-      </g>
-    </g>
-  </g>
-
-  <g id="ack-section">
-    <use href="#icon-acknowledgements" x="0" y="0" width="24" height="24"/>
-    <text x="35" y="19" class="section-title">Acknowledgements</text>
-    <rect x="0" y="35" height="130" class="container full-card"/>
-    
-    <g transform="translate(15, 60)" font-size="16">
-      <text class="accent" font-weight="700" x="0" y="0">Grateful for the support of:</text>
-      <text y="30" x="0">• Open Source Community</text>
-      <text y="55" x="0">• Collaborators &amp; Mentors</text>
-      <text y="30" x="350">• Fellow Developers</text>
-      <text y="55" x="350">• Constant Learning Journey</text>
-      <path d="M0 -20 L 100 -20 L 110 -10 L 110 30 Z" class="accent-stroke line" stroke-width="1" opacity="0.3" fill="none"/>
-    </g>
-  </g>
-
-  <g id="footer">
-    <line x1="20" y1="740" x2="780" y2="740" class="glow-line" opacity="0.8"/>
-    <circle cx="20" cy="740" r="5" class="accent"/>
-    <circle cx="780" cy="740" r="5" class="accent"/>
-    <text x="400" y="755" text-anchor="middle" font-size="12" opacity="0.6">© DERWINS OCHOA | SVS PROFILE SYSTEM v2.0</text>
-  </g>
 </svg>
