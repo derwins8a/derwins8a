@@ -1,5 +1,10 @@
-
 <svg width="4252" height="3189" viewBox="0 0 4252 3189" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+.aero-zone {
+      cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAiCAYAAAC0nUK+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAABHhJREFUeAHdVktsG2UQ/mZ3HTtxHk7SVFFoRXxJiNRWEGgvBSk59NRekLjDscfkghAgXvcqEXeE4cIBLlx7IVLhUKFK7bUcmkpuY2Qrfqyf+/iHmX9tBamp0zSRKvWXRmuv7e+b+eabWQOvxeGNjZwGTuk4FlSu8c2bm8aYqkmlqkLwNU7hOALsYnT0jRj4FqkUooUFYHHxm9Mg0Mw9EM3LdcIZGQGNjTGWlhjLyycmsLLA81zDUoOCRxGkAsLFi8ClSyciUHBCGDIruOvCMYZMHCsBcPmyhhJs4CWO17+SGYC7LsetFmFujqUiwtWrQCazxURV2tr6Ccc4A3BmY4SCbDhBwKbbhZPNWkKsrwPGFFizOAaBM3hhVGuVI4qIhIgaDeI4ZmhFGtevA6urBd7c/Pg44KwNtJkbwzbCkKjXg6lUiKUKyGt0OgnBhQsvTHDQUM06CEiACArY7bLbasGUy8QK3G4nce0a8/LyCxEksogzYgGXLCGgCkIWqNVit1Zjs7cHbjb1Pss9Imky5/NHEiSyhCHUfrGWrwCdjoIAvk+o18nd32dTLA4IrES0ugo+d24oQSILkoYquLiE0GySBfZ9RqMBVKvklsvMjx7B6PsBwcoK+OzZQrCx8fZQWSy4aB0pQZI1BJgseL0O1GrklMvAw4eIS6WkwSIhLS7Cm539gw8hSHwussQCHsqX1cs6rZ6EG0WJU0ZGSBJgmQFy5D5XKoh0VeRycDwPZn4+J8kowTptb98/ABdm7O+TBVenyBDJ6rXhiedloOB6njC5NBgynQNXemSePOGuEJt0GjFRbiyKfhTMdw7Ad3chK5dVllAaKYcEVK1JstttZhLkEDEch2yDWAc62UEsssVqCLGzmZo6RJZ+QzVz3THyI9LMlMRJ9g1IMqdkVrVKEUgLSbiU0s1kfPnGd4eCqyw67gpsrwIgGZHN3HE0WLG0J261uj1x584vdjVL1kinA1kbRXFZ5VBwHf8oKdUSSDMTSTTzBBwqizVXNvsestmv7A/VTZ2OLCb0yD4xn7UiaQO1aNUyEtdE2kjf/yFTKn0pcqEnUxvKxAbi8aDXe7+0tvYuVSoyDNDoSBg8x4rMUdQkzxu37zXbKLq18ODB9yLs+eaVK80wCMYHGkfS+DHX1SfUDoYczVz2K5lMu12w+0VNHgS38nfvfi5DUpbPuulu9zetTKvRkMxJKlnbu3Fj7SjwSLT4N18s/rxQKn04Uy5/sOT7X2g9qqNstOr048e/eqlUs7/b7Y4Pmk0dqqGLK7FtIs8ocjlXxlyecRYY/c8mMDn5VnFl5dN2HH9kn7X9k52d1Uqm8zs7tedlrgyRbUxNFsj/gPtHFg2q6VrtT+kJ+o5gvfYk+9To6CcYIguOKM2IDNW5p0//ThlzH0lPSYdJrSm23X1pcHt8WZHMjWy9XtBJ1X8Inkxk2vM+O3/79u9DEjv62CwnJ6dlCvOdmZk3G1NTs1nf/2t8bu4funcvPBF4n8DBmTNZWcEjdtwrFXkWIsarOv8BrwLMI7oI4gQAAAAASUVORK5CYII="), auto;
+}
+</style>
+<g class="aero-zone">
 <g id="DerwinsOS Desktop" clip-path="url(#clip0_23_86)">
 <rect width="4252" height="3189" fill="white"/>
 <g id="bg">
@@ -1711,4 +1716,5 @@
 <rect width="4252" height="3189" fill="white"/>
 </clipPath>
 </defs>
+</g>
 </svg>
