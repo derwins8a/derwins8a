@@ -1,8 +1,71 @@
 <svg width="4252" height="3189" viewBox="0 0 4252 3189" fill="none" xmlns="http://www.w3.org/2000/svg">
 <style>
-.aero-zone {
-      cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAiCAYAAAC0nUK+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAABHhJREFUeAHdVktsG2UQ/mZ3HTtxHk7SVFFoRXxJiNRWEGgvBSk59NRekLjDscfkghAgXvcqEXeE4cIBLlx7IVLhUKFK7bUcmkpuY2Qrfqyf+/iHmX9tBamp0zSRKvWXRmuv7e+b+eabWQOvxeGNjZwGTuk4FlSu8c2bm8aYqkmlqkLwNU7hOALsYnT0jRj4FqkUooUFYHHxm9Mg0Mw9EM3LdcIZGQGNjTGWlhjLyycmsLLA81zDUoOCRxGkAsLFi8ClSyciUHBCGDIruOvCMYZMHCsBcPmyhhJs4CWO17+SGYC7LsetFmFujqUiwtWrQCazxURV2tr6Ccc4A3BmY4SCbDhBwKbbhZPNWkKsrwPGFFizOAaBM3hhVGuVI4qIhIgaDeI4ZmhFGtevA6urBd7c/Pg44KwNtJkbwzbCkKjXg6lUiKUKyGt0OgnBhQsvTHDQUM06CEiACArY7bLbasGUy8QK3G4nce0a8/LyCxEksogzYgGXLCGgCkIWqNVit1Zjs7cHbjb1Pss9Imky5/NHEiSyhCHUfrGWrwCdjoIAvk+o18nd32dTLA4IrES0ugo+d24oQSILkoYquLiE0GySBfZ9RqMBVKvklsvMjx7B6PsBwcoK+OzZQrCx8fZQWSy4aB0pQZI1BJgseL0O1GrklMvAw4eIS6WkwSIhLS7Cm539gw8hSHwussQCHsqX1cs6rZ6EG0WJU0ZGSBJgmQFy5D5XKoh0VeRycDwPZn4+J8kowTptb98/ABdm7O+TBVenyBDJ6rXhiedloOB6njC5NBgynQNXemSePOGuEJt0GjFRbiyKfhTMdw7Ad3chK5dVllAaKYcEVK1JstttZhLkEDEch2yDWAc62UEsssVqCLGzmZo6RJZ+QzVz3THyI9LMlMRJ9g1IMqdkVrVKEUgLSbiU0s1kfPnGd4eCqyw67gpsrwIgGZHN3HE0WLG0J261uj1x584vdjVL1kinA1kbRXFZ5VBwHf8oKdUSSDMTSTTzBBwqizVXNvsestmv7A/VTZ2OLCb0yD4xn7UiaQO1aNUyEtdE2kjf/yFTKn0pcqEnUxvKxAbi8aDXe7+0tvYuVSoyDNDoSBg8x4rMUdQkzxu37zXbKLq18ODB9yLs+eaVK80wCMYHGkfS+DHX1SfUDoYczVz2K5lMu12w+0VNHgS38nfvfi5DUpbPuulu9zetTKvRkMxJKlnbu3Fj7SjwSLT4N18s/rxQKn04Uy5/sOT7X2g9qqNstOr048e/eqlUs7/b7Y4Pmk0dqqGLK7FtIs8ocjlXxlyecRYY/c8mMDn5VnFl5dN2HH9kn7X9k52d1Uqm8zs7tedlrgyRbUxNFsj/gPtHFg2q6VrtT+kJ+o5gvfYk+9To6CcYIguOKM2IDNW5p0//ThlzH0lPSYdJrSm23X1pcHt8WZHMjWy9XtBJ1X8Inkxk2vM+O3/79u9DEjv62CwnJ6dlCvOdmZk3G1NTs1nf/2t8bu4funcvPBF4n8DBmTNZWcEjdtwrFXkWIsarOv8BrwLMI7oI4gQAAAAASUVORK5CYII="), auto;
-}
+#ghost-cursor {
+    pointer-events: none;
+    transition: transform 0.1s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 0;
+    z-index: 9999;
+  }
+
+  .aero-zone { cursor: none; }
+  .cell:hover ~ #ghost-cursor { opacity: 1; }
+
+  .cell { fill: transparent; pointer-events: all; }
+
+  /* Fila 1 */
+  .c1:hover ~ #ghost-cursor { transform: translate(265px, 265px); }
+  .c2:hover ~ #ghost-cursor { transform: translate(797px, 265px); }
+  .c3:hover ~ #ghost-cursor { transform: translate(1328px, 265px); }
+  .c4:hover ~ #ghost-cursor { transform: translate(1860px, 265px); }
+  .c5:hover ~ #ghost-cursor { transform: translate(2391px, 265px); }
+  .c6:hover ~ #ghost-cursor { transform: translate(2923px, 265px); }
+  .c7:hover ~ #ghost-cursor { transform: translate(3454px, 265px); }
+  .c8:hover ~ #ghost-cursor { transform: translate(3986px, 265px); }
+  /* Fila 2 */
+  .c9:hover ~ #ghost-cursor { transform: translate(265px, 797px); }
+  .c10:hover ~ #ghost-cursor { transform: translate(797px, 797px); }
+  .c11:hover ~ #ghost-cursor { transform: translate(1328px, 797px); }
+  .c12:hover ~ #ghost-cursor { transform: translate(1860px, 797px); }
+  .c13:hover ~ #ghost-cursor { transform: translate(2391px, 797px); }
+  .c14:hover ~ #ghost-cursor { transform: translate(2923px, 797px); }
+  .c15:hover ~ #ghost-cursor { transform: translate(3454px, 797px); }
+  .c16:hover ~ #ghost-cursor { transform: translate(3986px, 797px); }
+  /* Fila 3 */
+  .c17:hover ~ #ghost-cursor { transform: translate(265px, 1328px); }
+  .c18:hover ~ #ghost-cursor { transform: translate(797px, 1328px); }
+  .c19:hover ~ #ghost-cursor { transform: translate(1328px, 1328px); }
+  .c20:hover ~ #ghost-cursor { transform: translate(1860px, 1328px); }
+  .c21:hover ~ #ghost-cursor { transform: translate(2391px, 1328px); }
+  .c22:hover ~ #ghost-cursor { transform: translate(2923px, 1328px); }
+  .c23:hover ~ #ghost-cursor { transform: translate(3454px, 1328px); }
+  .c24:hover ~ #ghost-cursor { transform: translate(3986px, 1328px); }
+  /* Fila 4 */
+  .c25:hover ~ #ghost-cursor { transform: translate(265px, 1860px); }
+  .c26:hover ~ #ghost-cursor { transform: translate(797px, 1860px); }
+  .c27:hover ~ #ghost-cursor { transform: translate(1328px, 1860px); }
+  .c28:hover ~ #ghost-cursor { transform: translate(1860px, 1860px); }
+  .c29:hover ~ #ghost-cursor { transform: translate(2391px, 1860px); }
+  .c30:hover ~ #ghost-cursor { transform: translate(2923px, 1860px); }
+  .c31:hover ~ #ghost-cursor { transform: translate(3454px, 1860px); }
+  .c32:hover ~ #ghost-cursor { transform: translate(3986px, 1860px); }
+  /* Fila 5 */
+  .c33:hover ~ #ghost-cursor { transform: translate(265px, 2391px); }
+  .c34:hover ~ #ghost-cursor { transform: translate(797px, 2391px); }
+  .c35:hover ~ #ghost-cursor { transform: translate(1328px, 2391px); }
+  .c36:hover ~ #ghost-cursor { transform: translate(1860px, 2391px); }
+  .c37:hover ~ #ghost-cursor { transform: translate(2391px, 2391px); }
+  .c38:hover ~ #ghost-cursor { transform: translate(2923px, 2391px); }
+  .c39:hover ~ #ghost-cursor { transform: translate(3454px, 2391px); }
+  .c40:hover ~ #ghost-cursor { transform: translate(3986px, 2391px); }
+  /* Fila 6 */
+  .c41:hover ~ #ghost-cursor { transform: translate(265px, 2923px); }
+  .c42:hover ~ #ghost-cursor { transform: translate(797px, 2923px); }
+  .c43:hover ~ #ghost-cursor { transform: translate(1328px, 2923px); }
+  .c44:hover ~ #ghost-cursor { transform: translate(1860px, 2923px); }
+  .c45:hover ~ #ghost-cursor { transform: translate(2391px, 2923px); }
+  .c46:hover ~ #ghost-cursor { transform: translate(2923px, 2923px); }
+  .c47:hover ~ #ghost-cursor { transform: translate(3454px, 2923px); }
+  .c48:hover ~ #ghost-cursor { transform: translate(3986px, 2923px); }
 </style>
 <g class="aero-zone">
 <g id="DerwinsOS Desktop" clip-path="url(#clip0_23_86)">
@@ -1716,5 +1779,49 @@
 <rect width="4252" height="3189" fill="white"/>
 </clipPath>
 </defs>
+        <rect width="4252" height="3189" fill="#0066CC00"/>
+  <rect class="cell c1" x="0" y="0" width="531" height="531"/>
+  <rect class="cell c2" x="531" y="0" width="531" height="531"/>
+  <rect class="cell c3" x="1062" y="0" width="531" height="531"/>
+  <rect class="cell c4" x="1593" y="0" width="531" height="531"/>
+  <rect class="cell c5" x="2124" y="0" width="531" height="531"/>
+  <rect class="cell c6" x="2655" y="0" width="531" height="531"/>
+  <rect class="cell c7" x="3186" y="0" width="531" height="531"/>
+  <rect class="cell c8" x="3717" y="0" width="531" height="531"/>
+  <rect class="cell c41" x="0" y="2655" width="531" height="531"/>
+  <rect class="cell c48" x="3717" y="2655" width="531" height="531"/>
+
+  <g id="ghost-cursor">
+<g filter="url(#filter0_d_78_43)">
+<path d="M13.5 32.9766C13.5 20.8955 28.1528 14.897 36.6245 23.5099L130.515 118.965C138.911 127.501 132.864 141.932 120.89 141.932H92.5509C90.7547 141.932 89.5533 143.781 90.2828 145.422L109.973 188.741C113.031 195.467 110.112 203.403 103.424 206.545L95.8882 210.086C88.9985 213.324 80.796 210.227 77.764 203.245L57.7083 157.056C56.9575 155.366 54.7509 154.946 53.4318 156.241L36.458 172.907C27.9183 181.291 13.5 175.241 13.5 163.273V32.9766Z" fill="url(#paint0_radial_78_43)"/>
+<path d="M13.5 32.9766C13.5 20.8955 28.1528 14.897 36.6245 23.5099L130.515 118.965C138.911 127.501 132.864 141.932 120.89 141.932H92.5509C90.7547 141.932 89.5533 143.781 90.2828 145.422L109.973 188.741C113.031 195.467 110.112 203.403 103.424 206.545L95.8882 210.086C88.9985 213.324 80.796 210.227 77.764 203.245L57.7083 157.056C56.9575 155.366 54.7509 154.946 53.4318 156.241L36.458 172.907C27.9183 181.291 13.5 175.241 13.5 163.273V32.9766Z" fill="url(#paint1_radial_78_43)" fill-opacity="0.32"/>
+<path d="M15.8271 32.9766C15.8272 22.9777 27.9542 18.0131 34.9658 25.1416L128.856 120.597C135.805 127.662 130.8 139.605 120.891 139.605H92.5508C89.0709 139.606 86.7429 143.187 88.1562 146.367L88.1602 146.376L88.165 146.385L107.854 189.703C110.385 195.271 107.97 201.839 102.435 204.439L94.8984 207.98C89.1963 210.66 82.4079 208.097 79.8984 202.318L59.8428 156.129L59.8389 156.12L59.835 156.11L59.6943 155.82C58.1667 152.891 54.2022 152.224 51.8018 154.581L34.8281 171.246C27.7603 178.185 15.8272 173.178 15.8271 163.273V32.9766Z" stroke="url(#paint2_linear_78_43)" stroke-width="4.6535"/>
+</g>
+<defs>
+<filter id="filter0_d_78_43" x="-2.86102e-06" y="19.4495" width="134.417" height="205.422" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="-6.75" dy="6.75"/>
+<feGaussianBlur stdDeviation="3.375"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.0480769 0 0 0 0 0.0480769 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_78_43"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_78_43" result="shape"/>
+</filter>
+<radialGradient id="paint0_radial_78_43" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(74.25 67.5) rotate(47.9108) scale(140.985 125.086)">
+<stop stop-color="white"/>
+<stop offset="0.442308" stop-color="#FF7373"/>
+<stop offset="0.764423" stop-color="#D83333"/>
+</radialGradient>
+<radialGradient id="paint1_radial_78_43" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(81 74.25) rotate(135) scale(33.4108 99.3172)">
+<stop offset="0.653846" stop-color="white"/>
+<stop offset="0.740385" stop-color="#999999" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="paint2_linear_78_43" x1="81" y1="70.875" x2="-27" y2="185.625" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF7171"/>
+<stop offset="1" stop-color="#C31717"/>
+</linearGradient>
+</defs>
+  </g>
 </g>
 </svg>
