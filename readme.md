@@ -1,3 +1,25 @@
+<details open>
+<summary><b>📱 View Standard Profile (Mobile-Friendly)</b></summary>
+<br>
+
+### Derwins Ochoa
+**Role:** Backend & UI/UX Developer  
+**Focus:** High-Performance, Scalable Systems & UI/UX Design  
+**Languages:** C#, C++, Python, JavaScript, TypeScript  
+**Frameworks:** FastAPI, React, Next.js, .NET, WinForms  
+**Tools:** PostgreSQL, Git/GitHub, CMake, SFML, Figma  
+
+#### Projects
+- **Route Master** (`C++`, `CMake`, `SFML`) — Bus-manager sim focused on route creation.
+- **Toll System Backend** (`Python`, `FastAPI`, `PostgreSQL`) — RESTful API for toll payments.
+- **BancoResponsable** (`C#`, `.NET 4.7.2`, `WinForms`) — Modern banking UI using OOP.
+
+</details>
+
+<details>
+<summary><b>💻 View Terminal Fastfetch (Desktop / LaTeX)</b></summary>
+<br>
+
 $\color{#4e9a06}\mathtt{derwins8a@github \color{white}: \color{#3465a4}\sim \color{white}\textdollar \ \ fastfetch.exe}$  
 $\color{#729fcf}\mathtt{/////////\ \ /////////}\ \ \color{white}\mathbf{\mathtt{Derwins\ Ochoa}}$  
 $\color{#729fcf}\mathtt{/////////\ \ /////////}\ \ \color{gray}\mathtt{-------------}$  
@@ -24,23 +46,29 @@ $\color{teal}\mathtt{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
 $\color{teal}\mathtt{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }$  
 $\color{teal}\mathtt{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\ \ \color{white}\mathbf{\mathtt{System\ Resources\ Info}}$  
 $\color{teal}\mathtt{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\ \ \color{gray}\mathtt{------}$  
-$\color{teal}\mathtt{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\ \ \color{#fce94f}\mathtt{Memory:\ }\color{white}\mathtt{XX.XX\ GiB\ /\ XX.XX\ GiB\ (XX\%)}$  
-$\color{teal}\mathtt{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\ \ \color{#fce94f}\mathtt{Swap:\ }\color{white}\mathtt{XXX.XX\ MiB\ /\ XX.XX\ GiB\ (X\%)}$  
-$\color{teal}\mathtt{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\ \ \color{#fce94f}\mathtt{Disk\ (C:\backslash):\ }\color{white}\mathtt{XXX.XX\ GiB\ /\ XXX.XX\ GiB\ (XX\%)\ -\ NTFS}$  
+$\color{teal}\mathtt{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\ \ \color{#fce94f}\mathtt{Memory:\ }\color{white}\mathtt{XX.XX\ GiB\ /\ XX.XX\ GiB\ (XX\\%)}$  
+$\color{teal}\mathtt{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\ \ \color{#fce94f}\mathtt{Swap:\ }\color{white}\mathtt{XXX.XX\ MiB\ /\ XX.XX\ GiB\ (X\\%)}$  
+$\color{teal}\mathtt{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\ \ \color{#fce94f}\mathtt{Disk\ (C:\backslash):\ }\color{white}\mathtt{XXX.XX\ GiB\ /\ XXX.XX\ GiB\ (XX\\%)\ -\ NTFS}$  
 $\color{teal}\mathtt{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\ \ \color{#fce94f}\mathtt{Local\ IP\ (Wi-Fi):\ }\color{white}\mathtt{195.0.3.236/24}$  
 $\color{teal}\mathtt{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\ \ \color{#fce94f}\mathtt{Locale:\ }\color{white}\mathtt{en-US,\ es-VE}$  
 $\color{teal}\mathtt{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }$  
 $\color{teal}\mathtt{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\ \ \color{#2e3436}\mathtt{▓}\color{#cc0000}\mathtt{▓}\color{#4e9a06}\mathtt{▓}\color{#c4a000}\mathtt{▓}\color{#3465a4}\mathtt{▓}\color{#75507b}\mathtt{▓}\color{#06989a}\mathtt{▓}\color{#d3d7cf}\mathtt{▓}$  
 $\color{teal}\mathtt{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\ \ \color{#555753}\mathtt{▓}\color{#ef2929}\mathtt{▓}\color{#8ae234}\mathtt{▓}\color{#fce94f}\mathtt{▓}\color{#729fcf}\mathtt{▓}\color{#ad7fa8}\mathtt{▓}\color{#34e2e2}\mathtt{▓}\color{#eeeeec}\mathtt{▓}$
 
-<!--
+</details>
+
+<details>
+<summary><b>🖼️ View GUI (Desktop & Mobile / SVG)</b></summary>
+<br>
 <p align="center">
 <picture>
 <source media="(max-width: 768px)" srcset="profile.svg">
 <img src="profile.svg" style="max-width: 100%; height: auto;" alt="Derwins Ochoa Profile">
 </picture>
 </p>
+</details>
 
+<!--
 
 # Derwins Ochoa
 
